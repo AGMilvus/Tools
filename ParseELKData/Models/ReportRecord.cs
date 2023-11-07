@@ -1,4 +1,5 @@
-﻿using CsvHelper.Configuration.Attributes;
+﻿using System.Globalization;
+using CsvHelper.Configuration.Attributes;
 using ParseELKData.Converters;
 
 namespace ParseELKData.Models;
@@ -6,7 +7,7 @@ namespace ParseELKData.Models;
 [Delimiter(";")]
 public class ReportRecord
 {
-    [TypeConverter(typeof(ElkRecordConverter))]
+    [TypeConverter(typeof(ReportElkRecordConverter))]
     [Name("timestamp")]
     public DateTime Timestamp { get; set; }
     [Name("count")]
