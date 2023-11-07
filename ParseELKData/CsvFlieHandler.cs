@@ -25,21 +25,18 @@ public class CsvFileHandler : ICsvFileHandler
 
     public List<ElkRecord> ReadAll()
     {
-        List<ElkRecord> result = new List<ElkRecord>();
-        var config = new CsvConfiguration(CultureInfo.InvariantCulture)
-        {
-            Delimiter = ";"
-        };
         using var reader = new StreamReader(_inputFilePath);
-        using var csv = new CsvReader(reader, config);
-        result = csv.GetRecords<ElkRecord>().ToList();
-        return result;
+        using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+        return csv.GetRecords<ElkRecord>().ToList();
     }
     
     public void WriteAll(IEnumerable data)
     {
         using var writer = new StreamWriter(_outputFilePath);
-        using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+        using var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture)
+        {
+            Delimiter = ";"
+        });
         csv.WriteRecords(data);
     }
 }

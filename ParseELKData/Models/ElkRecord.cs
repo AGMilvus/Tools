@@ -2,13 +2,12 @@
 using ParseELKData.Converters;
 
 namespace ParseELKData.Models;
-     
-[Delimiter(";")]
+
 public class ElkRecord
 {
     [TypeConverter(typeof(ElkRecordConverter))]
-    [Name("timestamp")]
+    [Name("@timestamp")]
     public DateTime Timestamp { get; set; }
-    [Name("duration")]
+    [Name("message.duration")]
     public int Duration { get; set; }
 }
