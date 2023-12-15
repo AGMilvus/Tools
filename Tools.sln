@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseELKData", "ParseELKData\ParseELKData.csproj", "{1F0EEEF4-5861-4378-928A-D92C34A598ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailValidation", "EmailValidation\EmailValidation.csproj", "{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{1F0EEEF4-5861-4378-928A-D92C34A598ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F0EEEF4-5861-4378-928A-D92C34A598ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F0EEEF4-5861-4378-928A-D92C34A598ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
