@@ -2,6 +2,8 @@
 using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
+using CsvHelper.TypeConversion;
+using EmailValidation.Models;
 using EmailValidation.Models.Csv;
 using Microsoft.Extensions.Configuration;
 
@@ -9,9 +11,9 @@ namespace EmailValidation;
 
 public interface ICsvFileService
 {
-    public IEnumerable<Original> LoadOriginalAll();
-    public IEnumerable<Report> LoadReportAll();
-    public void WriteAll(IEnumerable data);
+    IEnumerable<Original> LoadOriginalAll();
+    IEnumerable<Report> LoadReportAll();
+    void WriteAll(IEnumerable data);
 }
 
 public class CsvFileService : ICsvFileService
@@ -44,16 +46,26 @@ public class CsvFileService : ICsvFileService
             using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
             report.AddRange(csv.GetRecords<Report>());
         }
-        return report;
+        return report.ToList();
     }
 
     public void WriteAll(IEnumerable data)
     {
         using var writer = new StreamWriter(_outputFilePath);
-        using var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture)
-        {
-            Delimiter = ";"
-        });
+        using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+        csv.Context.TypeConverterCache.AddConverter<bool>(new CustomBoolConverter());
         csv.WriteRecords(data);
+    }
+    
+    public class CustomBoolConverter : DefaultTypeConverter
+    {
+        public override string ConvertToString(object? value, IWriterRow row, MemberMapData memberMapData)
+        {
+            if( value == null )
+            {
+                return string.Empty;
+            }
+            return ((bool)(value) ? 1 : 0).ToString();
+        }
     }
 }

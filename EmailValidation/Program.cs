@@ -1,4 +1,5 @@
 ﻿using EmailValidation.EntityFrameworkCore;
+using EmailValidation.EntityFrameworkCore.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,10 +15,12 @@ internal class Program
         IHost host = Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {
-                services.AddScoped<CsvFileService>();
-                services.AddHostedService<EmailValidationService>();
                 services.AddSqlite<AppDbContext>(hostContext.Configuration.GetConnectionString("DefaultConnection"),
                     null, builder => builder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+                
+                services.AddScoped<CsvFileService>();
+                services.AddTransient<IEmailRepository, EmailRepository>();
+                services.AddHostedService<EmailValidationService>();
             })
             .Build();
  

@@ -1,7 +1,6 @@
 ﻿namespace EmailValidation.Models.Csv;
 
-public class Original
+public class Original : Entity
 {
-    public string Email {get; set;}
     public bool DoNotUseEmail {get; set;}
 }

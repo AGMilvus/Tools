@@ -1,8 +1,7 @@
 ﻿namespace EmailValidation.Models.Csv;
 
-public class Report
+public class Report : Entity
 {
-    public string Email { get; set; }
     public State State { get; set; }
     public string? Reason { get; set; }
 }
