@@ -48,6 +48,66 @@
         <None Update="csv\Report_5.csv">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <None Update="csv\Report_1_508533_9a407780\active.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_1_508533_9a407780\all.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_1_508533_9a407780\inactive.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_2_508561_a3ee8eaa\active.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_2_508561_a3ee8eaa\all.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_2_508561_a3ee8eaa\inactive.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_3_508601_3a2b546c\active.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_3_508601_3a2b546c\all.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_3_508601_3a2b546c\inactive.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_4_510225_10f9a5a2\active.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_4_510225_10f9a5a2\all.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_4_510225_10f9a5a2\inactive.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_5_510241_9f9bdcdf\active.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_5_510241_9f9bdcdf\all.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\Report_5_510241_9f9bdcdf\inactive.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\EmailsRequest_1.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\EmailsRequest_2.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\EmailsRequest_3.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\RepeatedRequest.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="csv\RepeatedRequest2.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
     
 </Project>

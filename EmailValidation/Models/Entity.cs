@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace EmailValidation.Models;
+﻿namespace EmailValidation.Models;
 
 public class Entity
 {
