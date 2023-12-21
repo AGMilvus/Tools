@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseELKData", "ParseELKDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailValidation", "EmailValidation\EmailValidation.csproj", "{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitCsv", "SplitCsv\SplitCsv.csproj", "{907D34A3-99F1-487A-86A8-D02B127BA860}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E9FF1A3-E8A3-44AE-BEA1-6EF40255BBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{907D34A3-99F1-487A-86A8-D02B127BA860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907D34A3-99F1-487A-86A8-D02B127BA860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907D34A3-99F1-487A-86A8-D02B127BA860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907D34A3-99F1-487A-86A8-D02B127BA860}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
